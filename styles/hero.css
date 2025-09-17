@@ -17,7 +17,7 @@ section.hero{
         display: inline-block;
         overflow: hidden;
         height: 5rem;
-        width: min-content  ;
+        width: min-content ;
         vertical-align: bottom;
     }
     h1 span:nth-child(1), h1 span:nth-child(4) {
@@ -214,5 +214,43 @@ section.hero{
     /*radical static*/
     100% {
         transform: translateY(-15rem);
+    }
+}
+@media (width < 80rem) {
+    section.hero {
+        padding: 1rem 1.5rem 4rem;
+        flex-direction: column-reverse;
+
+        & .containerHero {
+            max-width: 19.5rem;
+        }
+
+        & >div:nth-child(2) {
+            max-width: 19.5rem;
+            height: 19.5rem;
+
+            & img[src*="Stars 1"] {
+                animation: slideIn 2s 600ms ease both, aapear 100ms 800ms both;
+            }
+
+            & img[src*="Stars 2"] {
+                opacity: 0;
+                transform: translateX(400%);
+                animation: slideIn 2.2s 600ms ease both, aapear 100ms 400ms both;;
+             }
+        }
+
+        h1 div {
+           height: 2.5rem;
+        }
+
+        & >div:nth-child(1) {
+            max-width: 19.5rem 18.5rem;
+        }
+
+        & .buttons {
+            flex-direction: column-reverse;
+        }
+
     }
 }

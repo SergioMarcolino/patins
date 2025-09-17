@@ -43,3 +43,10 @@ header {
         border-radius: 50%;
     }
 }
+
+@media (width <80rem) {
+    header {
+        max-width: 22.5rem;
+        padding: 1.25rem 1.5rem;
+    }
+}
